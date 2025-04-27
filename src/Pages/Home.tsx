@@ -1,9 +1,11 @@
 import React from 'react'
 import { Box } from '@mui/material'
+import HeroSection from '../Components/HeroSection'
 
 const Home = () => {
   return (
-    <Box>      
+    <Box sx={{mt:10}}>
+      <HeroSection />            
     </Box>
   )
 }

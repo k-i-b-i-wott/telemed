@@ -4,7 +4,7 @@ import { FaHospitalSymbol } from "react-icons/fa";
 import { GiSelfLove } from "react-icons/gi";
 import { useState } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
-import { IoIosLogOut } from "react-icons/io";
+import { IoIosLogOut, IoIosLogIn } from "react-icons/io";
 
 
 export const NavBar = () => {
@@ -21,7 +21,7 @@ export const NavBar = () => {
         
         <List>
             <ListItem>
-            <Button color="inherit">
+            <Button color="inherit" component={Link} to={"/"}>
                 Home             
             </Button>               
             </ListItem>
@@ -36,12 +36,12 @@ export const NavBar = () => {
             </Button>               
             </ListItem>
             <ListItem>
-            <Button color="inherit" endIcon={<IoIosLogOut />} sx={{bgcolor:"darkseagreen"}}>
+            <Button color="inherit" endIcon={<IoIosLogIn />} sx={{bgcolor:"darkseagreen"}}>
                 Login        
             </Button>               
             </ListItem>
             <ListItem>
-            <Button color="inherit" endIcon={<IoIosLogOut />} sx={{bgcolor:"lightseagreen"}}>
+            <Button color="inherit"  sx={{bgcolor:"lightseagreen"}}>
                 Register       
             </Button>               
             </ListItem>
@@ -65,11 +65,14 @@ export const NavBar = () => {
         <Avatar sx={{ m: 1, bgcolor: 'darkseagreen', width:100, height:100, fontSize:40 }} >
           VH
         </Avatar>
-        <Typography  component={Link} to={"/"} sx={{
+        <Typography  component={"a"} href="/" sx={{
             color:'inherit',              
               flexGrow:1,
               textWrap:'wrap',
-              fontSize:20
+              fontSize:20,
+              textDecoration:'none',
+              whiteSpace:'normal',
+              overflowWrap:'break-word'
             }}>
                 Village Wellness Hub
             </Typography>
@@ -87,14 +90,14 @@ export const NavBar = () => {
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Button
               color="inherit"
-              endIcon={<IoIosLogOut />}
+              endIcon={<IoIosLogIn />}
               sx={{ bgcolor: 'darkseagreen', mr: 2 }}
             >
               Login
             </Button>
             <Button
               color="inherit"
-              endIcon={<IoIosLogOut />}
+              
               sx={{ bgcolor: 'lightseagreen', mr: 2 }}
             >
               SignUp
@@ -115,6 +118,9 @@ export const NavBar = () => {
                         aria-label="open drawer"
                         edge="end"
                         onClick={handleDrawerToggle}
+                        sx={{
+                          width:300
+                        }}
                     >
                         <GiHamburgerMenu />
                     </IconButton>
