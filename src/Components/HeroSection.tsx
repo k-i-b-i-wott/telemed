@@ -26,7 +26,7 @@ const HeroSection = () => {
       boxShadow={3}
       sx={{
         padding: "1rem",
-        flex: 1, 
+         
         display: "flex",
         flexDirection: "column",
         
@@ -95,7 +95,7 @@ const HeroSection = () => {
       p:1,
       position: "absolute", 
       bottom: -40, 
-      left: 16, 
+      left: -30, 
       backgroundColor: "white", 
       borderRadius: 1
       
