@@ -4,6 +4,7 @@ import HeroSection from '../Components/HeroSection'
 import Services from '../Components/Services'
 import { OurProfessionals } from '../Components/OurProffesionals'
 import Testimonials from '../Components/Testimonials'
+import Subscribe from '../Components/Subscribe'
 
 const Home = () => {
   return (
@@ -11,7 +12,8 @@ const Home = () => {
       <HeroSection /> 
       <Services />     
       <OurProfessionals />
-      <Testimonials />      
+      <Testimonials /> 
+      <Subscribe />     
     </Box>
   )
 }

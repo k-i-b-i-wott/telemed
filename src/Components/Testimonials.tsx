@@ -5,7 +5,9 @@ const Testimonials = () => {
   return (
     <Box sx={{
         my:2,
-        p:2
+        p:2,
+        backgroundColor:"whitesmoke",
+        borderRadius:2
     }}>
         <Box sx={{
             display:"flex",
