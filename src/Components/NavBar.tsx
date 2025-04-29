@@ -1,7 +1,6 @@
 import { AppBar, Avatar, Button, IconButton,Typography, Toolbar, useMediaQuery,useTheme,ListItem,List, Drawer, Box, Divider } from '@mui/material'
 import { Link } from 'react-router-dom';
-import { FaHospitalSymbol } from "react-icons/fa";
-import { GiSelfLove } from "react-icons/gi";
+
 import { useState } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosLogOut, IoIosLogIn } from "react-icons/io";
@@ -36,12 +35,12 @@ export const NavBar = () => {
             </Button>               
             </ListItem>
             <ListItem>
-            <Button color="inherit" endIcon={<IoIosLogIn />} sx={{bgcolor:"darkseagreen"}}>
+            <Button color="inherit" component={Link} to={"/login"} endIcon={<IoIosLogIn />} sx={{bgcolor:"darkseagreen"}}>
                 Login        
             </Button>               
             </ListItem>
             <ListItem>
-            <Button color="inherit"  sx={{bgcolor:"lightseagreen"}}>
+            <Button color="inherit" component={Link} to={"/register"}  sx={{bgcolor:"lightseagreen"}}>
                 Register       
             </Button>               
             </ListItem>
@@ -82,7 +81,7 @@ export const NavBar = () => {
                     
                     <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Button color="inherit">Home</Button>
+              <Button component={Link} to="/" color="inherit">Home</Button>
               <Button color="inherit">Find Doctors</Button>
               <Button color="inherit">HealthCare Resources</Button>
             </Box>
@@ -97,7 +96,8 @@ export const NavBar = () => {
             </Button>
             <Button
               color="inherit"
-              
+              component ={Link}
+              to="/register"          
               sx={{ bgcolor: 'lightseagreen', mr: 2 }}
             >
               SignUp
