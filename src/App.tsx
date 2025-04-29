@@ -5,6 +5,7 @@ import Home from './Pages/Home'
 import Footer from './Components/Footer'
 import SignUp from './Pages/SignUp'
 import SignIn from './Pages/SignIn'
+import FindDoctors from './Pages/FindDoctors'
 const App = () => {
   return (
     <Box>
@@ -13,6 +14,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/register' element={<SignUp/>} />
         <Route path='/login' element={<SignIn/>} />
+        <Route path='/doctors' element={<FindDoctors />} />
       </Routes>
       <Footer />
     </Box>
