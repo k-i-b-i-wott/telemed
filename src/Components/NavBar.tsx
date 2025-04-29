@@ -90,6 +90,8 @@ export const NavBar = () => {
             <Button
               color="inherit"
               endIcon={<IoIosLogIn />}
+              component={Link}
+              to="/login"
               sx={{ bgcolor: 'darkseagreen', mr: 2 }}
             >
               Login
