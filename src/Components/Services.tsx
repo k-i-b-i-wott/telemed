@@ -10,7 +10,7 @@ const Services = () => {
   return (
     <Box sx={{
         mt:4,
-        bgcolor:"darkseagreen",
+        bgcolor:"#befae9",
         
         opacity:.9,
         alignItems:"center",

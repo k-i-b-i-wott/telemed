@@ -1,14 +1,21 @@
-import { Avatar, Box, Button, Grid, Paper, Typography } from '@mui/material'
-import React from 'react'
+import { Avatar, Box, Button,  Paper, Typography } from '@mui/material'
 
-export const OurProffesionals = () => {
+
+export const OurProfessionals = () => {
+    
   return (
-    <Box>
+    <Box sx={{
+        mt:4,
+        boxShadow:2,
+        py:4,
+        mb:2
+    }}>
         <Box sx={{
             display:"flex",
             flexDirection:"row",
             justifyContent:"space-between",
             alignItems:"center",
+            p:3
         }}>
             <Box sx={{
                 display:"flex",
@@ -29,14 +36,14 @@ export const OurProffesionals = () => {
         <Box sx={{
             display:"flex",
             flexDirection:"row",
-            justifyContent:"space-between",
+            justifyContent:"center",
             alignItems:"center",
             mt:2,
             flexWrap:"wrap",
             gap:3
         }}>
             <Paper elevation={12} sx={{
-                maxWidth:500,
+                maxWidth:400,
                 p:3,
             }}>
                 <Box sx={{
@@ -100,18 +107,20 @@ export const OurProffesionals = () => {
                     display:"flex",
                     flexDirection:"row",
                     justifyContent:"space-between",
+                    gap:2
                     
                 }}>
-                    <Button variant='contained' sx={{
-                        bgcolor:"darkgreen"
-                    }}>Book Appointment</Button>
                     <Button variant='outlined' sx={{
                         color:"darkgreen"
                     }}>View Profile</Button>
+                    <Button variant='contained' sx={{
+                        bgcolor:"darkgreen"
+                    }}>Book Appointment</Button>
+                    
                 </Box>
             </Paper>
             <Paper elevation={12} sx={{
-                maxWidth:500,
+                maxWidth:400,
                 p:3,
             }}>
                 <Box sx={{
@@ -134,13 +143,13 @@ export const OurProffesionals = () => {
                             color:"darkseagreen"
 
                         }}>
-                            Dr. John Doe
+                            Dr. Priya Sharma
                         </Typography>
                         <Typography sx={{
                             fontWeight:100,
                             fontStyle:"italic",
                         }}>
-                            Cardiologist
+                            Obstetrics & Gynecology
                         </Typography>
                     </Box>                    
                 </Box>  
@@ -164,29 +173,31 @@ export const OurProffesionals = () => {
                         <Typography sx={{
                             
                         }}>
-                            15 Years
+                            12 Years
                         </Typography>
                     </Box>
                     <Typography>
-                        <span>⭐</span> 4.5/5
+                        <span>⭐</span> 4.9/5
                     </Typography>
                 </Box>
                 <Box sx={{
                     display:"flex",
                     flexDirection:"row",
                     justifyContent:"space-between",
+                    gap:2
                     
                 }}>
-                    <Button variant='contained' sx={{
-                        bgcolor:"darkgreen"
-                    }}>Book Appointment</Button>
                     <Button variant='outlined' sx={{
                         color:"darkgreen"
                     }}>View Profile</Button>
+                    <Button variant='contained' sx={{
+                        bgcolor:"darkgreen"
+                    }}>Book Appointment</Button>
+                    
                 </Box>
             </Paper>
             <Paper elevation={12} sx={{
-                maxWidth:500,
+                maxWidth:400,
                 p:3,
             }}>
                 <Box sx={{
@@ -209,13 +220,13 @@ export const OurProffesionals = () => {
                             color:"darkseagreen"
 
                         }}>
-                            Dr. John Doe
+                            Dr. Sarah Johnson
                         </Typography>
                         <Typography sx={{
                             fontWeight:100,
                             fontStyle:"italic",
                         }}>
-                            Cardiologist
+                        General Medicine
                         </Typography>
                     </Box>                    
                 </Box>  
@@ -239,29 +250,30 @@ export const OurProffesionals = () => {
                         <Typography sx={{
                             
                         }}>
-                            15 Years
+                            10 Years
                         </Typography>
                     </Box>
                     <Typography>
-                        <span>⭐</span> 4.5/5
+                        <span>⭐</span> 4.7/5
                     </Typography>
                 </Box>
                 <Box sx={{
                     display:"flex",
                     flexDirection:"row",
                     justifyContent:"space-between",
+                    gap:2
                     
                 }}>
-                    <Button variant='contained' sx={{
-                        bgcolor:"darkgreen"
-                    }}>Book Appointment</Button>
                     <Button variant='outlined' sx={{
                         color:"darkgreen"
                     }}>View Profile</Button>
+                    <Button variant='contained' sx={{
+                        bgcolor:"darkgreen"
+                    }}>Book Appointment</Button>
+                    
                 </Box>
-            </Paper>
-            <Paper elevation={12} sx={{
-                maxWidth:500,
+            </Paper><Paper elevation={12} sx={{
+                maxWidth:400,
                 p:3,
             }}>
                 <Box sx={{
@@ -284,13 +296,13 @@ export const OurProffesionals = () => {
                             color:"darkseagreen"
 
                         }}>
-                            Dr. John Doe
+                            Dr. Michael Chen
                         </Typography>
                         <Typography sx={{
                             fontWeight:100,
                             fontStyle:"italic",
                         }}>
-                            Cardiologist
+                           Pediatrics
                         </Typography>
                     </Box>                    
                 </Box>  
@@ -314,27 +326,30 @@ export const OurProffesionals = () => {
                         <Typography sx={{
                             
                         }}>
-                            15 Years
+                            10 Years
                         </Typography>
                     </Box>
                     <Typography>
-                        <span>⭐</span> 4.5/5
+                        <span>⭐</span> 4.9/5
                     </Typography>
                 </Box>
                 <Box sx={{
                     display:"flex",
                     flexDirection:"row",
                     justifyContent:"space-between",
+                    gap:2
                     
                 }}>
-                    <Button variant='contained' sx={{
-                        bgcolor:"darkgreen"
-                    }}>Book Appointment</Button>
                     <Button variant='outlined' sx={{
                         color:"darkgreen"
                     }}>View Profile</Button>
+                    <Button variant='contained' sx={{
+                        bgcolor:"darkgreen"
+                    }}>Book Appointment</Button>
+                    
                 </Box>
             </Paper>
+            
         </Box>
     </Box>
   )
