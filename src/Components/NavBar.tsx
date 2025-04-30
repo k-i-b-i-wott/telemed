@@ -32,7 +32,10 @@ export const NavBar = () => {
             <ListItem>
             <Button component={Link} to={'/resources'} color="inherit">
                 HealthCare Resources             
-            </Button>               
+            </Button> 
+            <Button component={Link} to={'/about'} color="inherit">
+                About Us            
+            </Button>              
             </ListItem>
             <ListItem>
             <Button color="inherit" component={Link} to={"/login"} endIcon={<IoIosLogIn />} sx={{bgcolor:"darkseagreen"}}>
@@ -84,6 +87,9 @@ export const NavBar = () => {
               <Button component={Link} to="/" color="inherit">Home</Button>
               <Button  component={Link} to={'/doctors'} color="inherit">Find Doctors</Button>
               <Button component={Link} to={'/resources'} color="inherit">HealthCare Resources</Button>
+              <Button component={Link} to={'/about'} color="inherit">
+                About Us         
+            </Button>
             </Box>
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>

@@ -7,6 +7,7 @@ import SignUp from './Pages/SignUp'
 import SignIn from './Pages/SignIn'
 import FindDoctors from './Pages/FindDoctors'
 import HealthCareResources from './Pages/HealthCare.Resources'
+import AboutUs from './Pages/AboutUs'
 const App = () => {
   return (
     <Box>
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/login' element={<SignIn/>} />
         <Route path='/doctors' element={<FindDoctors />} />
         <Route path='/resources' element={<HealthCareResources />} />
+        <Route path='/about' element={<AboutUs />} />
       </Routes>
       <Footer />
     </Box>
