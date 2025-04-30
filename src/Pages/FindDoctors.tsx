@@ -32,7 +32,8 @@ const FindDoctors = () => {
             display:"flex",
             justifyContent:"space-around",
             mt:3,
-            alignItems:"center"
+            alignItems:"center",
+            flexWrap:"wrap"
             
         }}>
             <Box sx={{
@@ -51,7 +52,7 @@ const FindDoctors = () => {
                     
                     type="text"
                     sx={{
-                        width:300, 
+                        width:200
                                                
                     }}
                 />
@@ -68,7 +69,7 @@ const FindDoctors = () => {
                 Specialty
             </Typography>
             <FormControl  sx={{
-                width:300
+                width:200
 
             }}>                
                 <Select>
@@ -92,7 +93,7 @@ const FindDoctors = () => {
                 <Button variant="contained"
                 sx={{
                     backgroundColor:"darkseagreen",
-                    width:300
+                   maxWidth:300
                 }}
                 >
                     Apply Filters                                        
@@ -103,6 +104,7 @@ const FindDoctors = () => {
             display:"flex",
             alignItems:"center",
             justifyContent:"space-between",
+            placeItems:"center",
             flexWrap:"wrap",
             boxShadow:1,
             borderBlockColor:"darkseagreen",

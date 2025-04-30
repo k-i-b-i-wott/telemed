@@ -30,7 +30,7 @@ export const NavBar = () => {
             </Button>               
             </ListItem>
             <ListItem>
-            <Button color="inherit">
+            <Button component={Link} to={'/resources'} color="inherit">
                 HealthCare Resources             
             </Button>               
             </ListItem>
@@ -83,7 +83,7 @@ export const NavBar = () => {
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <Button component={Link} to="/" color="inherit">Home</Button>
               <Button  component={Link} to={'/doctors'} color="inherit">Find Doctors</Button>
-              <Button color="inherit">HealthCare Resources</Button>
+              <Button component={Link} to={'/resources'} color="inherit">HealthCare Resources</Button>
             </Box>
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
