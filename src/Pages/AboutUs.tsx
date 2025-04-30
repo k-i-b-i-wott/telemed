@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material'
+import AboutImg  from "../../src/assets/images/about-img.jpeg"
 
 
 const AboutUs = () => {
@@ -64,7 +65,7 @@ const AboutUs = () => {
             </Box>            
             <Box 
             component={"img"}            
-            src='https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            src={AboutImg}
             sx={{
                 maxWidth:{
                     xs:"100%",
