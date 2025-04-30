@@ -1,4 +1,4 @@
-import { Box, Button, TextField, Typography } from '@mui/material'
+import { Box, Button, CardContent, TextField, Typography, Card, CardActions, } from '@mui/material'
 
 const HealthCareResources = () => {
   return (
@@ -119,9 +119,287 @@ const HealthCareResources = () => {
 
         </Box>
         <Box boxShadow={2} sx={{
-            
+            mt:3,
+            p:3,
+            display:"flex",
+            flexDirection:"row",
+            gap:3,
+            justifyContent:"space-around",                       
+            flexWrap:"wrap",
+            alignItems:"center"
         }}>
+            <Card sx={{
+                width:400,
+                borderRadius:3,
+                
+            }}>
+                <CardContent sx={{
+                    display:"flex",
+                    flexDirection:"column", 
+                    gap:2,
+                    borderRadius:3,
+                    
+                }}>
+                    <Box
+                    component={"img"}
 
+                    src='https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                    alt='healthcare'
+                    sx={{
+                        width:"100%",
+                        height:300,
+                        objectFit:"cover"
+                    }}
+                    />
+                    <Box sx={{
+                        display:"flex",
+                        alignItems:"center",
+                        justifyContent:"space-between"
+                    }}>
+                        <Typography variant='body2' sx={{
+                            color:"seagreen",
+
+                        }}>
+                             Infectious Disease
+                        </Typography >
+                        <Typography variant='body2' sx={{
+                            color:"seagreen"
+                        }}>15TH April 2025</Typography>
+                    </Box>  
+                    <Box sx={{
+                        display:"flex",
+                        flexDirection:"column",
+                        gap:1,
+                    }}>
+                        <Typography variant='h6'>
+                             COVID-19 Prevention Guidelines
+                        </Typography>
+                        <Typography variant='body2' sx={{
+                            color:"seagreen",
+                            fontStyle:"italic",
+                            fontSize:12
+                        }}>
+                            By Dr. John Doe
+                        </Typography>
+                        <Typography variant='body1' sx={{
+                            color:"seagreen",
+                            mb:3,
+                        }}>
+                        Essential guidelines for preventing COVID-19 in rural communities, including vaccination information, mask guidance, and social distancing practices                        
+                        </Typography>
+                        <Typography variant='body2' component={"a"} href='#' sx={{
+                            textDecoration:"none",
+                            color:"seagreen",
+                            fontWeight:700,
+
+                        }}>Read More</Typography>
+                    </Box>                 
+                </CardContent>
+            </Card>
+            <Card sx={{
+                width:400,
+                borderRadius:3,
+                
+            }}>
+                <CardContent sx={{
+                    display:"flex",
+                    flexDirection:"column", 
+                    gap:2,
+                    borderRadius:3,
+                    
+                }}>
+                    <Box
+                    component={"img"}
+
+                    src='https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                    alt='healthcare'
+                    sx={{
+                        width:"100%",
+                        height:300,
+                        objectFit:"cover"
+                    }}
+                    />
+                    <Box sx={{
+                        display:"flex",
+                        alignItems:"center",
+                        justifyContent:"space-between"
+                    }}>
+                        <Typography variant='body2' sx={{
+                            color:"seagreen",
+
+                        }}>
+                             Infectious Disease
+                        </Typography >
+                        <Typography variant='body2' sx={{
+                            color:"seagreen"
+                        }}>15TH April 2025</Typography>
+                    </Box>  
+                    <Box sx={{
+                        display:"flex",
+                        flexDirection:"column",
+                        gap:1,
+                    }}>
+                        <Typography variant='h6'>
+                             COVID-19 Prevention Guidelines
+                        </Typography>
+                        <Typography variant='body2' sx={{
+                            color:"seagreen",
+                            fontStyle:"italic",
+                            fontSize:12
+                        }}>
+                            By Dr. John Doe
+                        </Typography>
+                        <Typography variant='body1' sx={{
+                            color:"seagreen",
+                            mb:3,
+                        }}>
+                        Essential guidelines for preventing COVID-19 in rural communities, including vaccination information, mask guidance, and social distancing practices                        
+                        </Typography>
+                        <Typography variant='body2' component={"a"} href='#' sx={{
+                            textDecoration:"none",
+                            color:"seagreen",
+                            fontWeight:700,
+
+                        }}>Read More</Typography>
+                    </Box>                 
+                </CardContent>
+            </Card>
+            <Card sx={{
+                width:400,
+                borderRadius:3,
+                
+            }}>
+                <CardContent sx={{
+                    display:"flex",
+                    flexDirection:"column", 
+                    gap:2,
+                    borderRadius:3,
+                    
+                }}>
+                    <Box
+                    component={"img"}
+
+                    src='https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                    alt='healthcare'
+                    sx={{
+                        width:"100%",
+                        height:300,
+                        objectFit:"cover"
+                    }}
+                    />
+                    <Box sx={{
+                        display:"flex",
+                        alignItems:"center",
+                        justifyContent:"space-between"
+                    }}>
+                        <Typography variant='body2' sx={{
+                            color:"seagreen",
+
+                        }}>
+                             Infectious Disease
+                        </Typography >
+                        <Typography variant='body2' sx={{
+                            color:"seagreen"
+                        }}>15TH April 2025</Typography>
+                    </Box>  
+                    <Box sx={{
+                        display:"flex",
+                        flexDirection:"column",
+                        gap:1,
+                    }}>
+                        <Typography variant='h6'>
+                             COVID-19 Prevention Guidelines
+                        </Typography>
+                        <Typography variant='body2' sx={{
+                            color:"seagreen",
+                            fontStyle:"italic",
+                            fontSize:12
+                        }}>
+                            By Dr. John Doe
+                        </Typography>
+                        <Typography variant='body1' sx={{
+                            color:"seagreen",
+                            mb:3,
+                        }}>
+                        Essential guidelines for preventing COVID-19 in rural communities, including vaccination information, mask guidance, and social distancing practices                        
+                        </Typography>
+                        <Typography variant='body2' component={"a"} href='#' sx={{
+                            textDecoration:"none",
+                            color:"seagreen",
+                            fontWeight:700,
+
+                        }}>Read More</Typography>
+                    </Box>                 
+                </CardContent>
+            </Card>
+            <Card sx={{
+                width:400,
+                borderRadius:3,
+                
+            }}>
+                <CardContent sx={{
+                    display:"flex",
+                    flexDirection:"column", 
+                    gap:2,
+                    borderRadius:3,
+                    
+                }}>
+                    <Box
+                    component={"img"}
+
+                    src='https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                    alt='healthcare'
+                    sx={{
+                        width:"100%",
+                        height:300,
+                        objectFit:"cover"
+                    }}
+                    />
+                    <Box sx={{
+                        display:"flex",
+                        alignItems:"center",
+                        justifyContent:"space-between"
+                    }}>
+                        <Typography variant='body2' sx={{
+                            color:"seagreen",
+
+                        }}>
+                             Infectious Disease
+                        </Typography >
+                        <Typography variant='body2' sx={{
+                            color:"seagreen"
+                        }}>15TH April 2025</Typography>
+                    </Box>  
+                    <Box sx={{
+                        display:"flex",
+                        flexDirection:"column",
+                        gap:1,
+                    }}>
+                        <Typography variant='h6'>
+                             COVID-19 Prevention Guidelines
+                        </Typography>
+                        <Typography variant='body2' sx={{
+                            color:"seagreen",
+                            fontStyle:"italic",
+                            fontSize:12
+                        }}>
+                            By Dr. John Doe
+                        </Typography>
+                        <Typography variant='body1' sx={{
+                            color:"seagreen",
+                            mb:3,
+                        }}>
+                        Essential guidelines for preventing COVID-19 in rural communities, including vaccination information, mask guidance, and social distancing practices                        
+                        </Typography>
+                        <Typography variant='body2' component={"a"} href='#' sx={{
+                            textDecoration:"none",
+                            color:"seagreen",
+                            fontWeight:700,
+
+                        }}>Read More</Typography>
+                    </Box>                 
+                </CardContent>
+            </Card>
         </Box>             
     </Box>
   )
