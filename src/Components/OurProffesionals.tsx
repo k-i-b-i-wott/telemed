@@ -13,18 +13,18 @@ export const OurProfessionals = () => {
         <Box sx={{
             display:"flex",
             flexDirection:"row",
-            justifyContent:"space-between",
+            justifyContent:"space-around",
             alignItems:"center",
             p:3
         }}>
             <Box sx={{
                 display:"flex",
                 flexDirection:"column",
-               
+
                 gap:1
             }}>
-            <Typography variant='h3' fontWeight={600}>Our HealthCare Professionals</Typography>
-            <Typography variant='body1' sx={{fontSize:15, color:"darkseagreen"}}>Qualified doctors ready to provide care remotely.</Typography>
+                <Typography variant='h5' fontWeight={600}>Our HealthCare Professionals</Typography>
+                <Typography variant='body1' sx={{fontSize:15, color:"darkseagreen"}}>Qualified doctors ready to provide care remotely.</Typography>
             </Box>
             <Button variant='outlined' sx={{
                 bgColor:"darkseagreen",

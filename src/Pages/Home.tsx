@@ -8,7 +8,17 @@ import Subscribe from '../Components/Subscribe'
 
 const Home = () => {
   return (
-    <Box sx={{mt:10}}>
+    <Box sx={{
+      mt: 10,
+    width: '100vw',
+     
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+      
+
+    }}>
       <HeroSection /> 
       <Services />     
       <OurProfessionals />
