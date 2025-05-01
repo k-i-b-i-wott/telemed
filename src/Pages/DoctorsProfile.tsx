@@ -4,7 +4,7 @@ import{Avatar, Box, Button, Divider, Typography} from '@mui/material'
 const DoctorsProfile = () => {
   return (
     <Box sx={{
-      mt:12,
+      mt:17,
       display:"flex",
       flexDirection:{
         xs:"column",
@@ -39,12 +39,16 @@ const DoctorsProfile = () => {
          gap:2,
          color:"seagreen"
       }}>
-        <Typography variant='h4'>Specialty</Typography>
+        <Typography variant='h5' sx={{
+          color:"seagreen",
+          fontSize:20
+        }}>Specializations</Typography>
         <Box sx={{
           display:"flex",
           flexDirection:"row",
           gap:1,
-         
+          flexWrap:"wrap",
+          whiteSpace:"wrap"        
       
         }}>
         <Typography variant='body1' sx={{
@@ -67,9 +71,35 @@ const DoctorsProfile = () => {
         </Box>
       </Box>
 
+      <Divider />
+      <Box sx={{
+        display:"flex",
+         flexDirection:"column",
+         alignItems:"flex-start",
+         gap:2,
+         color:"seagreen"
+      }}>
+        <Typography variant='h4'>Languages</Typography>
+        <Box sx={{
+          display:"flex",
+          flexDirection:"row",
+          gap:2,
+        }}>
+        <Typography variant='body1' sx={{
+          fontSize:12,
+          
+        }}>English</Typography>
+        <Typography variant='body1' sx={{
+          fontSize:12,
+          
+        }}>Kiswahili</Typography>  
+        </Box>        
+      </Box>
       </Box> 
       <Box>
-        
+        <Box>
+                  
+        </Box>        
       </Box>                       
     </Box>
   )
