@@ -1,7 +1,15 @@
 
-import{Avatar, Box, Button, Divider, Tab,  Typography,Rating} from '@mui/material'
+import{Avatar, Box, Button, Divider, Tab,  Typography,Rating,LinearProgress} from '@mui/material'
 import { useState } from 'react';
 import {TabContext, TabPanel,TabList} from "@mui/lab"
+
+const reviewsData = [
+  { stars: 5, count: 2, total: 3 },
+  { stars: 4, count: 1, total: 3 },
+  { stars: 3, count: 0, total: 3 },
+  { stars: 2, count: 0, total: 3 },
+  { stars: 1, count: 0, total: 3 },
+];
 const DoctorsProfile = () => {
   const [value, setValue] = useState('1');
 
@@ -243,14 +251,48 @@ const DoctorsProfile = () => {
           <Typography variant="h4" sx={{ color: "#284A3A", mb: 2 }}>
             Patients Reviews
           </Typography>
-          <Box sx={{display:"flex", flexDirection:"ro", gap:2 }}> 
+          <Box sx={{display:"flex", flexDirection:"row", gap:2 }}> 
             <Box sx={{display:"flex", flexDirection:"column", gap:1}}>
               <Typography variant="h6" sx={{ color: "#284A3A",}}>
                 4.5  
               </Typography>
               <Rating name="half-rating" defaultValue={4.5} precision={0.5} /> 
               <Typography sx={{color:"seagreen"}}>5 reviews</Typography>
-            </Box>     
+            </Box>
+            <Box sx={{display:"flex", flexDirection:"column", gap:1}}>
+              {
+                reviewsData.map((review) => {
+                  const percentage = (review.count / review.total) * 100
+                  return(
+                    <Box key={review.stars} sx={{mb:1}}>
+                      <Box sx={{alignItems:"center", spacing:1}}>
+                      <Typography variant="h6" sx={{ color: "#284A3A",}}>
+                         {review.stars} {review.stars === 1 ? 'star' : 'stars'}
+                      </Typography>
+                    </Box>
+                    <Box>
+                      <LinearProgress variant="determinate"
+                  value={percentage}
+                  sx={{
+                    height: 8,
+                    borderRadius: 4,
+                    backgroundColor: '#e0e0e0',
+                    '& .MuiLinearProgress-bar': {
+                      backgroundColor: '#4CAF50', 
+                    },
+                  }} /> 
+                    </Box>
+                    <Box>
+                      <Typography sx={{color:"seagreen"}}>{review.count} reviews</Typography> 
+                    </Box>
+                    </Box>
+                    
+                  )
+                }
+                 
+                )
+              }
+            </Box>  
             
           </Box>
         </TabPanel>
