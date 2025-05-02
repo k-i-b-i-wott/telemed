@@ -129,19 +129,71 @@ const DoctorsProfile = () => {
         </Box>
         <Box boxShadow={2}>
         <TabPanel value="1">
-          <Box >
+          <Box sx={{display:"flex", flexDirection:"column", gap:2}} >
              <Typography variant='h6' sx={{
-               color:"seagreen"
+               color:"#284A3A"
 
              }}>
                 About Dr. John Doe
              </Typography>
              <Typography variant='body1' sx={{
-               color:"seagreen",               
+               color:"seagreen",   
+               fontSize:12            
              }}>
               Dr. John Doe is a dedicated general practitioner with over 15 years of experience in rural healthcare. She specializes in preventive care, chronic disease management, and telemedicine services for underserved communities.
              </Typography>
-          </Box>
+             <Divider />
+             <Typography variant='h6' sx={{
+               color:"#284A3A"
+
+             }}>
+                Education & Training
+             </Typography>
+             <Box sx={{ borderLeft: '2px solid #c8e6c9', pl: 2, ml: 1, mb: 2 }}>
+                <Typography variant="subtitle1" fontWeight="bold" sx={{
+                  color:"#284A3A"
+                }}>
+                  Doctor of Medicine
+                </Typography>
+                <Typography variant="body2" sx={{
+                  color:"seagreen"
+                }}>
+                  Stanford University School of Medicine
+                </Typography>
+                <Typography variant="caption" color="text.secondary">
+                  2008
+                </Typography>
+              </Box>
+
+              <Box sx={{ borderLeft: '2px solid #c8e6c9', pl: 2, ml: 1 }}>
+                <Typography variant="subtitle1" fontWeight="bold" sx={{
+                  color:"#284A3A"
+                }}>
+                  Bachelor of Science in Biology
+                </Typography>
+                <Typography variant="body2" sx={{
+                  color:"seagreen"
+                }}>
+                  University of Michigan
+                </Typography>
+                <Typography variant="caption" color="text.secondary">
+                  2004
+                </Typography>
+              </Box> 
+              <Box sx={{
+                display:"flex",
+                flexDirection:"column",
+                gap:2
+              }}>
+                <Typography variant='h6' sx={{
+                  color:"#284A3A"
+
+                }}>Experience</Typography>
+                <Typography variant='body1' sx={{
+                  color:"seagreen"                  
+                }}>15 years of experience in providing healthcare services, with a special focus on rural and underserved communities.</Typography>
+              </Box>                                      
+            </Box>
         </TabPanel>
         <TabPanel value="2">Availability</TabPanel>
         <TabPanel value="3">Reviews</TabPanel>
