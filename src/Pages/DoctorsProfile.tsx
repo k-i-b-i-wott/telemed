@@ -18,13 +18,19 @@ const DoctorsProfile = () => {
         md:"row"
       },
       gap:3,  
-      width:"100vw"      
+      p:{
+        xs:1,
+        md:3
+      }
       
     }}>
       <Box boxShadow={2} sx={{
         display:"flex",
         flexDirection:"column",
-       
+        width:{
+          xs:"100%",
+          md:"40%"
+        },       
         gap:2,
         p:3
       }}>   
@@ -106,17 +112,13 @@ const DoctorsProfile = () => {
         </Box>        
       </Box>
       </Box> 
-      <Box>
-      <Box sx={{  typography: 'body1',
-        flexGrow: 1,
-        width: "100%", 
-        display: "flex",
-        flexDirection: "column",
-        mt: 3,
-       }}>
-      <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, display: "flex", flexDirection: "row", width: "100%", alignItems: "center",justifyContent:"space-around", borderColor: 'divider' }}>
-          <TabList onChange={handleChange}  sx={{width:"100%",
+      <Box sx={{width:{
+        xs:"100%",
+        md:"60%"
+      }, padding: 2}}>       
+      <TabContext value={value} >
+        <Box sx={{ borderBottom: 1, display: "flex", flexDirection: "row", alignItems: "center",justifyContent:"space-around", borderColor: 'divider' }}>
+          <TabList onChange={handleChange}  sx={{
           display:"flex",
           justifyContent:"space-around"
           }}>
@@ -125,13 +127,29 @@ const DoctorsProfile = () => {
             <Tab label="Reviews" value="3" />
           </TabList>
         </Box>
-        <TabPanel value="1">About</TabPanel>
+        <Box boxShadow={2}>
+        <TabPanel value="1">
+          <Box >
+             <Typography variant='h6' sx={{
+               color:"seagreen"
+
+             }}>
+                About Dr. John Doe
+             </Typography>
+             <Typography variant='body1' sx={{
+               color:"seagreen",               
+             }}>
+              Dr. John Doe is a dedicated general practitioner with over 15 years of experience in rural healthcare. She specializes in preventive care, chronic disease management, and telemedicine services for underserved communities.
+             </Typography>
+          </Box>
+        </TabPanel>
         <TabPanel value="2">Availability</TabPanel>
         <TabPanel value="3">Reviews</TabPanel>
+        </Box>
       </TabContext>
     </Box>      
       </Box>                       
-    </Box>
+    
   )
 }
 
