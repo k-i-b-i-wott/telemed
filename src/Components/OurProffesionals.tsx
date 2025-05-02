@@ -1,5 +1,5 @@
 import { Avatar, Box, Button,  Paper, Typography } from '@mui/material'
-
+import {Link} from "react-router-dom"
 
 export const OurProfessionals = () => {
     
@@ -26,7 +26,7 @@ export const OurProfessionals = () => {
                 <Typography variant='h5' fontWeight={600}>Our HealthCare Professionals</Typography>
                 <Typography variant='body1' sx={{fontSize:15, color:"darkseagreen"}}>Qualified doctors ready to provide care remotely.</Typography>
             </Box>
-            <Button variant='outlined' sx={{
+            <Button variant='outlined' component={Link} to={'/doctors'} sx={{
                 bgColor:"darkseagreen",
                 color:"lightseagreen"
             }}>
@@ -110,7 +110,7 @@ export const OurProfessionals = () => {
                     gap:2
                     
                 }}>
-                    <Button variant='outlined' sx={{
+                    <Button variant='outlined' component={Link} to={'/profile'} sx={{
                         color:"darkgreen"
                     }}>View Profile</Button>
                     <Button variant='contained' sx={{

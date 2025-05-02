@@ -32,10 +32,12 @@ export const NavBar = () => {
             <ListItem>
             <Button component={Link} to={'/resources'} color="inherit">
                 HealthCare Resources             
-            </Button> 
+            </Button>                          
+            </ListItem>
+            <ListItem>
             <Button component={Link} to={'/about'} color="inherit">
                 About Us            
-            </Button>              
+            </Button> 
             </ListItem>
             <ListItem>
             <Button color="inherit" component={Link} to={"/login"} endIcon={<IoIosLogIn />} sx={{bgcolor:"darkseagreen"}}>

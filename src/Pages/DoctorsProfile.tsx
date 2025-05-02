@@ -130,9 +130,9 @@ const DoctorsProfile = () => {
           display:"flex",
           justifyContent:"space-around"
           }}>
-            <Tab label="About" value="1" />
-            <Tab label="Availability" value="2" />
-            <Tab label="Reviews" value="3" />
+            <Tab label="About" value="1" sx={{color:"seagreen"}} />
+            <Tab label="Availability" value="2" sx={{color:"seagreen"}} />
+            <Tab label="Reviews" value="3" sx={{color:"seagreen"}} />
           </TabList>
         </Box>
         <Box boxShadow={2}>
@@ -146,7 +146,7 @@ const DoctorsProfile = () => {
              </Typography>
              <Typography variant='body1' sx={{
                color:"seagreen",   
-               fontSize:12            
+                       
              }}>
               Dr. John Doe is a dedicated general practitioner with over 15 years of experience in rural healthcare. She specializes in preventive care, chronic disease management, and telemedicine services for underserved communities.
              </Typography>
@@ -257,7 +257,7 @@ const DoctorsProfile = () => {
                 4.5  
               </Typography>
               <Rating name="half-rating" defaultValue={4.5} precision={0.5} /> 
-              <Typography sx={{color:"seagreen"}}>5 reviews</Typography>
+              <Typography sx={{color:"seagreen"}}>3 reviews</Typography>
             </Box>
             <Box sx={{display:"flex", flexDirection:"column", gap:1}}>
               {

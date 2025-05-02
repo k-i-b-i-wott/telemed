@@ -1,5 +1,5 @@
 import {Box, Button, Card, CardActions,Avatar, CardContent, FormControl,  MenuItem, Select, TextField, Typography} from "@mui/material"
-
+import {Link} from 'react-router-dom'
 const FindDoctors = () => {
   return (
     <Box sx={{
@@ -258,7 +258,7 @@ const FindDoctors = () => {
                     gap:2
                     
                 }}>
-                    <Button variant='outlined' sx={{
+                    <Button variant='outlined' component={Link} to={'/profile'} sx={{
                         color:"darkgreen"
                     }}>View Profile</Button>
                     <Button variant='contained' sx={{
