@@ -195,7 +195,50 @@ const DoctorsProfile = () => {
               </Box>                                      
             </Box>
         </TabPanel>
-        <TabPanel value="2">Availability</TabPanel>
+        <TabPanel value="2">
+  <Typography variant="h4" sx={{ color: "#284A3A", mb: 2 }}>Weekly Availability</Typography>
+  <Box
+    sx={{
+      display: "grid",
+      gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+      gap: 2,
+      width: "100%",
+    }}
+  >
+    {[
+      { day: "Monday", hours: "9:00 AM - 5:00 PM" },
+      { day: "Tuesday", hours: "9:00 AM - 5:00 PM" },
+      { day: "Wednesday", hours: "9:00 AM - 1:00 PM" },
+      { day: "Thursday", hours: "9:00 AM - 5:00 PM" },
+      { day: "Friday", hours: "9:00 AM - 5:00 PM" },
+      { day: "Saturday", hours: "10:00 AM - 2:00 PM" },
+      { day: "Sunday", hours: "Closed" },
+    ].map(({ day, hours }) => (
+      <Box
+        key={day}
+        sx={{
+          p: 2,
+          border: "1px solid #ddd",
+          borderRadius: 2,
+          boxShadow: 1,
+          backgroundColor: "#f9fefa",
+        }}
+      >
+        <Typography variant="body1" sx={{ color: "seagreen", fontWeight: 600 }}>
+          {day}
+        </Typography>
+        <Typography variant="body2" sx={{ color: "seagreen" }}>
+          {hours}
+        </Typography>
+      </Box>
+    ))}
+  </Box>
+
+  <Typography variant="body2" sx={{ mt: 3, fontStyle: "italic", color: "gray" }}>
+    <strong>Note:</strong> All times are in your local timezone. Appointments are typically 30 minutes long.
+  </Typography>
+</TabPanel>
+
         <TabPanel value="3">Reviews</TabPanel>
         </Box>
       </TabContext>
