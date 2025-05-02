@@ -1,5 +1,5 @@
 
-import{Avatar, Box, Button, Divider, Tab,  Typography} from '@mui/material'
+import{Avatar, Box, Button, Divider, Tab,  Typography,Rating} from '@mui/material'
 import { useState } from 'react';
 import {TabContext, TabPanel,TabList} from "@mui/lab"
 const DoctorsProfile = () => {
@@ -196,50 +196,64 @@ const DoctorsProfile = () => {
             </Box>
         </TabPanel>
         <TabPanel value="2">
-  <Typography variant="h4" sx={{ color: "#284A3A", mb: 2 }}>Weekly Availability</Typography>
-  <Box
-    sx={{
-      display: "grid",
-      gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-      gap: 2,
-      width: "100%",
-    }}
-  >
-    {[
-      { day: "Monday", hours: "9:00 AM - 5:00 PM" },
-      { day: "Tuesday", hours: "9:00 AM - 5:00 PM" },
-      { day: "Wednesday", hours: "9:00 AM - 1:00 PM" },
-      { day: "Thursday", hours: "9:00 AM - 5:00 PM" },
-      { day: "Friday", hours: "9:00 AM - 5:00 PM" },
-      { day: "Saturday", hours: "10:00 AM - 2:00 PM" },
-      { day: "Sunday", hours: "Closed" },
-    ].map(({ day, hours }) => (
-      <Box
-        key={day}
-        sx={{
-          p: 2,
-          border: "1px solid #ddd",
-          borderRadius: 2,
-          boxShadow: 1,
-          backgroundColor: "#f9fefa",
-        }}
-      >
-        <Typography variant="body1" sx={{ color: "seagreen", fontWeight: 600 }}>
-          {day}
-        </Typography>
-        <Typography variant="body2" sx={{ color: "seagreen" }}>
-          {hours}
-        </Typography>
-      </Box>
-    ))}
-  </Box>
+            <Typography variant="h4" sx={{ color: "#284A3A", mb: 2 }}>Weekly Availability</Typography>
+            <Box
+              sx={{
+                display: "grid",
+                gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+                gap: 2,
+                width: "100%",
+              }}
+            >
+              {[
+                { day: "Monday", hours: "9:00 AM - 5:00 PM" },
+                { day: "Tuesday", hours: "9:00 AM - 5:00 PM" },
+                { day: "Wednesday", hours: "9:00 AM - 1:00 PM" },
+                { day: "Thursday", hours: "9:00 AM - 5:00 PM" },
+                { day: "Friday", hours: "9:00 AM - 5:00 PM" },
+                { day: "Saturday", hours: "10:00 AM - 2:00 PM" },
+                { day: "Sunday", hours: "Closed" },
+              ].map(({ day, hours }) => (
+                <Box
+                  key={day}
+                  sx={{
+                    p: 2,
+                    border: "1px solid #ddd",
+                    borderRadius: 2,
+                    boxShadow: 1,
+                    backgroundColor: "#f9fefa",
+                  }}
+                >
+                  <Typography variant="body1" sx={{ color: "seagreen", fontWeight: 600 }}>
+                    {day}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: "seagreen" }}>
+                    {hours}
+                  </Typography>
+                </Box>
+              ))}
+            </Box>
 
-  <Typography variant="body2" sx={{ mt: 3, fontStyle: "italic", color: "gray" }}>
-    <strong>Note:</strong> All times are in your local timezone. Appointments are typically 30 minutes long.
-  </Typography>
-</TabPanel>
+            <Typography variant="body2" sx={{ mt: 3, fontStyle: "italic", color: "gray" }}>
+              <strong>Note:</strong> All times are in your local timezone. Appointments are typically 30 minutes long.
+            </Typography>
+          </TabPanel>
 
-        <TabPanel value="3">Reviews</TabPanel>
+        <TabPanel value="3">
+          <Typography variant="h4" sx={{ color: "#284A3A", mb: 2 }}>
+            Patients Reviews
+          </Typography>
+          <Box sx={{display:"flex", flexDirection:"ro", gap:2 }}> 
+            <Box sx={{display:"flex", flexDirection:"column", gap:1}}>
+              <Typography variant="h6" sx={{ color: "#284A3A",}}>
+                4.5  
+              </Typography>
+              <Rating name="half-rating" defaultValue={4.5} precision={0.5} /> 
+              <Typography sx={{color:"seagreen"}}>5 reviews</Typography>
+            </Box>     
+            
+          </Box>
+        </TabPanel>
         </Box>
       </TabContext>
     </Box>      
