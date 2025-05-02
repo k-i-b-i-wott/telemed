@@ -264,23 +264,24 @@ const DoctorsProfile = () => {
                 reviewsData.map((review) => {
                   const percentage = (review.count / review.total) * 100
                   return(
-                    <Box key={review.stars} sx={{mb:1}}>
+                  <Box key={review.stars} sx={{mb:1, display:"flex", flexDirection:"row", gap:1}}>
                       <Box sx={{alignItems:"center", spacing:1}}>
                       <Typography variant="h6" sx={{ color: "#284A3A",}}>
                          {review.stars} {review.stars === 1 ? 'star' : 'stars'}
                       </Typography>
-                    </Box>
-                    <Box>
-                      <LinearProgress variant="determinate"
-                  value={percentage}
-                  sx={{
-                    height: 8,
-                    borderRadius: 4,
-                    backgroundColor: '#e0e0e0',
-                    '& .MuiLinearProgress-bar': {
-                      backgroundColor: '#4CAF50', 
-                    },
-                  }} /> 
+                      </Box>
+                   <Box flexGrow={1} sx={{alignItems:"center",  width:300}}>
+                  <LinearProgress 
+                      variant="determinate"
+                      value={percentage}
+                      sx={{
+                        height: 8,
+                        borderRadius: 4,
+                        backgroundColor: '#e0e0e0',
+                        '& .MuiLinearProgress-bar': {
+                          backgroundColor: '#4CAF50', 
+                        },
+                      }} /> 
                     </Box>
                     <Box>
                       <Typography sx={{color:"seagreen"}}>{review.count} reviews</Typography> 
