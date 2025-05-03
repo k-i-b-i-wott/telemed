@@ -1,4 +1,4 @@
-import { Avatar, Box, Button,  Paper, Typography } from '@mui/material'
+import { Avatar, Box, Button,  Divider,  Paper, Typography } from '@mui/material'
 import {Link} from "react-router-dom"
 
 export const OurProfessionals = () => {
@@ -33,10 +33,11 @@ export const OurProfessionals = () => {
                 View All
             </Button>
         </Box>
+        <Divider />
         <Box sx={{
             display:"flex",
             flexDirection:"row",
-            justifyContent:"center",
+            justifyContent:"space-around",
             alignItems:"center",
             mt:2,
             flexWrap:"wrap",

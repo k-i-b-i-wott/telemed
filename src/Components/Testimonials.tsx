@@ -1,4 +1,4 @@
-import { Box, Grid, Paper, Typography } from '@mui/material'
+import { Box,  Paper, Typography } from '@mui/material'
 
 
 const Testimonials = () => {
@@ -7,7 +7,9 @@ const Testimonials = () => {
         my:2,
         p:2,
         backgroundColor:"whitesmoke",
-        borderRadius:2
+        borderRadius:2,
+        width:"100vw",
+
     }}>
         <Box sx={{
             display:"flex",

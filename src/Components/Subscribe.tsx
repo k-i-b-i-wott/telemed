@@ -1,4 +1,5 @@
 import { Box,Button,Paper, Typography } from '@mui/material'
+import { Link } from 'react-router-dom'
 
 
 const Subscribe = () => {
@@ -14,7 +15,8 @@ const Subscribe = () => {
             flexDirection:"column",
             justifyContent:"center",
             alignItems:"center",
-            borderRadius:3
+            borderRadius:3,
+            px:3
         }}>
             <Typography variant='h3' sx={{
                 textAlign:"center",
@@ -31,10 +33,17 @@ const Subscribe = () => {
                 gap:2,
                 mt:3
             }}>
-                <Button variant='contained' sx={{bgcolor:"white", color:"darkseagreen"}}>
+                <Button variant='contained'
+                component={Link}
+                to={'/register'}
+                 sx={{bgcolor:"white", color:"darkseagreen"}}>
                     Register
                 </Button>
-                <Button variant='outlined' sx={{
+                <Button
+                 variant='outlined'
+                 component={Link}
+                 to={'/doctors'}
+                  sx={{
                  color:"white"
                 }}>
                     Find a Doctor

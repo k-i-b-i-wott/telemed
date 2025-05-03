@@ -10,6 +10,8 @@ const reviewsData = [
   { stars: 2, count: 0, total: 3 },
   { stars: 1, count: 0, total: 3 },
 ];
+
+
 const DoctorsProfile = () => {
   const [value, setValue] = useState('1');
 
@@ -52,7 +54,7 @@ const DoctorsProfile = () => {
       <Avatar sx={{width:100, height:100}}></Avatar>   
       <Typography variant='h5'>Dr. John Doe</Typography>
       <Typography variant='body1'><span>⭐</span> 4.5/5(3 reviews)</Typography>
-      <Button variant='contained' fullWidth sx={{mb:2, backgroundColor:"seagreen"}}>View Profile</Button> 
+      <Button variant='contained' fullWidth sx={{mb:2, backgroundColor:"seagreen"}}>Book Appointment</Button> 
       <Button variant='outlined' fullWidth sx={{mb:2,color:"seagreen"}}>Send Message</Button>
       </Box>
       <Divider />
@@ -125,10 +127,17 @@ const DoctorsProfile = () => {
         md:"60%"
       }, padding: 2}}>       
       <TabContext value={value} >
-        <Box sx={{ borderBottom: 1, display: "flex", flexDirection: "row", alignItems: "center",justifyContent:"space-around", borderColor: 'divider' }}>
+        <Box sx={{  borderColor: 'divider' }}>
           <TabList onChange={handleChange}  sx={{
           display:"flex",
-          justifyContent:"space-around"
+          justifyContent:"space-between",
+          alignItems:"center"          ,
+          borderRadius:3,
+          width:{
+            xs:"100%",
+            md:"100%"
+          },
+          mb:2,
           }}>
             <Tab label="About" value="1" sx={{color:"seagreen"}} />
             <Tab label="Availability" value="2" sx={{color:"seagreen"}} />

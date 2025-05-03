@@ -1,4 +1,4 @@
-import { Box, Button, CardContent, TextField, Typography, Card, CardActions, } from '@mui/material'
+import { Box, Button, CardContent, TextField, Typography, Card,  Divider, } from '@mui/material'
 
 const HealthCareResources = () => {
   return (
@@ -75,6 +75,7 @@ const HealthCareResources = () => {
             justifyContent:"space-around",
             gap:3,
             flexWrap:"wrap",
+            mb:3,
         }}>
             <Button variant='contained' sx={{
                 bgcolor:"#DCF0E4",
@@ -118,6 +119,7 @@ const HealthCareResources = () => {
             }}>More ....</Button>    
 
         </Box>
+        <Divider />
         <Box boxShadow={2} sx={{
             mt:3,
             p:3,

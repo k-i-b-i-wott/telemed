@@ -89,8 +89,7 @@ export const NavBar = () => {
               <Button component={Link} to="/" color="inherit">Home</Button>
               <Button  component={Link} to={'/doctors'} color="inherit">Find Doctors</Button>
               <Button component={Link} to={'/resources'} color="inherit">HealthCare Resources</Button>
-              <Button component={Link} to={'/about'} color="inherit">
-              <Button component={Link} to={'/profile'}>Profile</Button>
+              <Button component={Link} to={'/about'} color="inherit">              
                 About Us         
             </Button>
             </Box>
