@@ -1,8 +1,30 @@
 import { Avatar, Box, Button, FormControlLabel,Checkbox, Paper, TextField, Grid, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
-
+import { supabase } from '../utils/apiUrl'
 
 const SignUp = () => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        const target = e.target as typeof e.target & {
+        emailAddress: { value: string }
+        password: { value: string }
+        firstName: { value: string }
+        lastName: { value: string }
+        address: { value: string }
+        phoneNumber: { value: string }
+        }
+    
+        const { error } = await supabase.auth.signUp({
+        email: target.email.value,
+        password: target.password.value,
+        })
+    
+        if (error) {
+        console.error('Error signing up:', error.message)
+        } else {
+        console.log('Sign up successful!')
+        }
+    }     
   return (
     <Box sx={{
         display:"flex",
