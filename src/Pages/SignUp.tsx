@@ -1,29 +1,31 @@
 import { Avatar, Box, Button, FormControlLabel,Checkbox, Paper, TextField, Grid, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { supabase } from '../utils/apiUrl'
+import  { useState } from 'react'
 
 const SignUp = () => {
+    const [emailAddress, setEmailAddress] =useState<string>("")
+    const [password, setPassword] =useState<string>("")
+    const [firstName, setFirstName] =useState<string>("")
+    const [lastName, setLastName] =useState<string>("")
+    const [userName, setUserName] =useState<string>("")
+    const [address, setAddress] =useState<string>("")
+    const [phoneNumber, setPhoneNumber] =useState<string>("")
+    const [confirmPassword, setConfirmPassword] =useState<string>("")
+    const [error, setError] =useState<string>("")    
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        const target = e.target as typeof e.target & {
-        emailAddress: { value: string }
-        password: { value: string }
-        firstName: { value: string }
-        lastName: { value: string }
-        address: { value: string }
-        phoneNumber: { value: string }
+        if (password !== confirmPassword) {
+            setError("Passwords do not match")
+            return
         }
-    
-        const { error } = await supabase.auth.signUp({
-        email: target.email.value,
-        password: target.password.value,
+        const { data, error } = await supabase.auth.signUp({
+            email: emailAddress,
+            password: password,
         })
-    
         if (error) {
-        console.error('Error signing up:', error.message)
-        } else {
-        console.log('Sign up successful!')
-        }
+            setError(error.message)
+        } 
     }     
   return (
     <Box sx={{
