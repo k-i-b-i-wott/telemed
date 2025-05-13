@@ -6,7 +6,7 @@ import SendIcon from '@mui/icons-material/Send';
 import { useMutation } from '@tanstack/react-query';
 import axios from 'axios';
 import apiUrl from '../utils/apiUrl';
-
+import ReactMarkdown from 'react-markdown';
 interface Message {
   sender: 'user' | 'bot';
   text: string;
@@ -20,12 +20,12 @@ const ChatWidget = () => {
   const [isTyping, setIsTyping] = useState(false);
 
 
-  // --- 1. Updated mutation to accept a message and return bot reply ---
+
   const { mutate, isPending } = useMutation({
     mutationKey: ['Chatbot'],
     mutationFn: async (message: string) => {
-      const response = await axios.post(`${apiUrl}/chat/chatbot`, { prompt:message }); // sending user input
-      return response.data; // expects { reply: 'bot response' }
+      const response = await axios.post(`${apiUrl}/chat/chatbot`, { prompt:message }); /
+      return response.data; 
     },
     onSuccess: (data: { data: string }) => {
   const botText = data.data;
@@ -40,21 +40,21 @@ const ChatWidget = () => {
       index++;
 
       setMessages((prev) => {
-        // If there's already a typing message, update it
+       
         if (prev[prev.length - 1]?.sender === 'bot') {
           return [
             ...prev.slice(0, -1),
             { sender: 'bot', text: currentText }
           ];
         }
-        // Else add a new bot message
+        
         return [...prev, { sender: 'bot', text: currentText }];
       });
     } else {
       clearInterval(interval);
       setIsTyping(false);
     }
-  }, 30); // typing speed in ms per character
+  }, 30); 
 },
 
     onError: (error) => {
@@ -68,7 +68,7 @@ const ChatWidget = () => {
 
   const toggleChat = () => setIsOpen(!isOpen);
 
-  // --- 2. Send user message and trigger mutation for bot reply ---
+  
   const handleSend = () => {
     if (!input.trim()) return;
 
@@ -77,9 +77,9 @@ const ChatWidget = () => {
       text: input
     };
 
-    setMessages((prev) => [...prev, userMessage]); // show user message
-    mutate(input); // send to backend and get bot reply
-    setInput(''); // clear input field
+    setMessages((prev) => [...prev, userMessage]); 
+    mutate(input); 
+    setInput('');
   };
 
   return (
@@ -99,7 +99,7 @@ const ChatWidget = () => {
             borderRadius: 3,
           }}
         >
-          {/* Header */}
+        
           <Box
             sx={{
               backgroundColor: 'seagreen',
@@ -117,7 +117,7 @@ const ChatWidget = () => {
             </IconButton>
           </Box>
 
-          {/* Message area */}
+         
           <Box
             sx={{
               flex: 1,
@@ -144,7 +144,9 @@ const ChatWidget = () => {
                     maxWidth: '80%'
                   }}
                 >
-                  {msg.text}
+                <ReactMarkdown>
+                    {msg.text}
+                </ReactMarkdown>
                 </Box>
               </Box>
             ))}
@@ -171,7 +173,7 @@ const ChatWidget = () => {
 
           <Divider />
 
-          {/* Input area */}
+          
           <Box sx={{ p: 1, display: 'flex' }}>
             <TextField
               fullWidth
@@ -188,7 +190,7 @@ const ChatWidget = () => {
         </Paper>
       )}
 
-      {/* Floating button to toggle chat */}
+      
       <Fab
         color="primary"
         onClick={toggleChat}
