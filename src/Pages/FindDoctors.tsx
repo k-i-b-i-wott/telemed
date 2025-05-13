@@ -71,11 +71,11 @@ const FindDoctors = () => {
             <FormControl  sx={{
                 width:200
 
-            }}>                
+            }}>      
+                           
                 <Select>
                     <MenuItem>All Specialties</MenuItem>
-                    <MenuItem>General Medicine</MenuItem>
-                    
+                    <MenuItem>General Medicine</MenuItem>                    
                     <MenuItem>Pediatrics</MenuItem>
                     <MenuItem>Obstetrics $ Gynecology</MenuItem>
                     <MenuItem>Cardiology</MenuItem>

@@ -5,7 +5,7 @@ import Services from '../Components/Services'
 import { OurProfessionals } from '../Components/OurProffesionals'
 import Testimonials from '../Components/Testimonials'
 import Subscribe from '../Components/Subscribe'
-
+import ChatWidget from '../Components/ChatBot'
 const Home = () => {
   return (
     <Box sx={{
@@ -22,6 +22,7 @@ const Home = () => {
       <HeroSection /> 
       <Services />     
       <OurProfessionals />
+      <ChatWidget />      
       <Testimonials /> 
       <Subscribe />     
     </Box>
