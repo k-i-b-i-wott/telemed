@@ -111,7 +111,7 @@ const ChatWidget = () => {
               borderRadius: 3,
             }}
           >
-            <Typography variant="subtitle1">First aid Assistant</Typography>
+            <Typography variant="subtitle1">Ask Doctor First about medical assistance and emergencies</Typography>
             <IconButton onClick={toggleChat} size="small" sx={{ color: 'white' }}>
               <CloseIcon fontSize="small" />
             </IconButton>

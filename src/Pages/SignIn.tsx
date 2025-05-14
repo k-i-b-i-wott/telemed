@@ -22,7 +22,7 @@ const SignIn = () => {
             return response.data
         },
         onSuccess:()=>{
-            // navigate('/')
+            navigate('/resources')
         },
         onError:(error)=>{
             if(axios.isAxiosError(error)){

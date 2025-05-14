@@ -9,6 +9,7 @@ import FindDoctors from './Pages/FindDoctors'
 import HealthCareResources from './Pages/HealthCare.Resources'
 import AboutUs from './Pages/AboutUs'
 import DoctorsProfile from './Pages/DoctorsProfile'
+import UserProfile from './Pages/UserProfile'
 const App = () => {
   return (
     <Box>
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='/resources' element={<HealthCareResources />} />
         <Route path='/about' element={<AboutUs />} />
         <Route path='/profile' element ={<DoctorsProfile />}/>
+        <Route path='/myprofile' element = {<UserProfile />}/>
       </Routes>
       <Footer />
     </Box>
