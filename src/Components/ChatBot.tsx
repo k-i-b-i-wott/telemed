@@ -24,7 +24,7 @@ const ChatWidget = () => {
   const { mutate, isPending } = useMutation({
     mutationKey: ['Chatbot'],
     mutationFn: async (message: string) => {
-      const response = await axios.post(`${apiUrl}/chat/chatbot`, { prompt:message }); /
+      const response = await axios.post(`${apiUrl}/chat/chatbot`, { prompt:message }); 
       return response.data; 
     },
     onSuccess: (data: { data: string }) => {
@@ -111,7 +111,7 @@ const ChatWidget = () => {
               borderRadius: 3,
             }}
           >
-            <Typography variant="subtitle1">Chat Assistant</Typography>
+            <Typography variant="subtitle1">First aid Assistant</Typography>
             <IconButton onClick={toggleChat} size="small" sx={{ color: 'white' }}>
               <CloseIcon fontSize="small" />
             </IconButton>
