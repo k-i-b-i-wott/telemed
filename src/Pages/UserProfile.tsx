@@ -2,12 +2,12 @@ import { Box,Typography,Paper} from '@mui/material'
 
 const UserProfile = () => {
   return (
-    <Box >
-        <Paper>
-            <Typography>
-                    This is my Profile                                
-            </Typography>
-        </Paper>
+    <Box  sx={{
+      mt:17
+    }}>
+      <Box>
+              
+      </Box>        
     </Box>
   )
 }

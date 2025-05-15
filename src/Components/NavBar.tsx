@@ -55,6 +55,11 @@ export const NavBar = () => {
                 Logout            
             </Button>               
             </ListItem>
+            <ListItem>
+              <Button color="inherit" component={Link} to={"/myprofile"} sx={{}}>
+                    My Profile
+              </Button>
+            </ListItem>
         </List>
        </Box> 
     )
@@ -115,6 +120,10 @@ export const NavBar = () => {
             <Divider orientation="vertical" flexItem sx={{ bgcolor: 'white', mr: 2 }} />
             <Button color="inherit" endIcon={<IoIosLogOut />} sx={{ bgcolor: 'red' }}>
               Logout
+            </Button>
+            <Divider />
+            <Button color ='inherit' component={Link} to={'/myprofile'}>
+              My Profile
             </Button>
           </Box>
                     </>                    
